@@ -47,7 +47,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Selector labels
 */}}
 {{- define "umbrella-test.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "umbrella-test.name" . }}
+app.kubernetes.io/name: {{ include "umbrella-test.fullname" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
