@@ -4,11 +4,17 @@
 
 replicaCount: 1
 
-image:
-  repository: nginx
+imageSpendService:
+  repository: gcr.io/buoyant-algebra-276307/spend
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: latest
+
+imageBudgetService:
+  repository: gcr.io/buoyant-algebra-276307/budget
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: latest
 
 imagePullSecrets: []
 nameOverride: ""
@@ -38,7 +44,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8101
 
 ingress:
   enabled: false
