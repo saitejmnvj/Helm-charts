@@ -52,8 +52,6 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
-Create the name of the service account to use
-*/}}
 {{- define "umbrella-test.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
 {{- default (include "umbrella-test.fullname" .) .Values.serviceAccount.name }}
@@ -61,3 +59,4 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+*/}}
