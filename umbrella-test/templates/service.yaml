@@ -7,9 +7,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - protocol: TCP
+      port: {{ .Values.service.port }}
       targetPort: 8101
-      protocol: TCP
       name: http
   selector:
     {{- include "umbrella-test.selectorLabels" . | nindent 4 }}
