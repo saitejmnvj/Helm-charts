@@ -6,7 +6,7 @@ replicaCount: 1
 
 imageSpendService:
   repository: gcr.io/buoyant-algebra-276307/spend
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
 
