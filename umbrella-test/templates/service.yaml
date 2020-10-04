@@ -12,5 +12,4 @@ spec:
       targetPort: 8101
       name: http
   selector:
-    app: {{ include "umbrella-test.fullname" . }}
     {{- include "umbrella-test.selectorLabels" . | nindent 4 }}
