@@ -6,3 +6,7 @@ Some Helm commands:
 
 helm create {{chartname}}
 
+helm install {{releasename}} ./{{Chartname}}
+
+helm delete {{releasename}}
+
