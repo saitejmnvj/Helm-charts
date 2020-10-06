@@ -8,7 +8,7 @@ metadata:
     {{- include "umbrella-test.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
-  clusterIP: {{ .Values.service.clusterIP }}
+  # clusterIP: {{ .Values.service.clusterIP }}
   ports:
     - protocol: TCP
       port: {{ .Values.service.port }}
