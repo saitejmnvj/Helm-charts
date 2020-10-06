@@ -7,9 +7,9 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: 8761
       name: http
   selector:
     {{- include "eureka.selectorLabels" . | nindent 4 }}
