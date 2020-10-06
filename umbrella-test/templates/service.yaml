@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ include "umbrella-test.fullname" . }}
   annotations:
-    cloud.google.com/load-balancer-type: "Internal"
+    # cloud.google.com/load-balancer-type: "Internal"
   labels:
     {{- include "umbrella-test.labels" . | nindent 4 }}
 spec:
