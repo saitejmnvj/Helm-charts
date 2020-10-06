@@ -48,6 +48,7 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 80
+  clusterIp: 10.11.242.115
 
 ingress:
   enabled: false
