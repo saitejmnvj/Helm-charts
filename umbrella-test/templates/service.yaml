@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "umbrella-test.fullname" . }}
-  # annotations:
-    # cloud.google.com/load-balancer-type: "Internal"
+  annotations:
+    cloud.google.com/load-balancer-type: "Internal"
   labels:
     {{- include "umbrella-test.labels" . | nindent 4 }}
 spec:
