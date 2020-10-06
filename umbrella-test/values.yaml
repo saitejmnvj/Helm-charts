@@ -10,6 +10,9 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
 
+ports:
+  containerPort: 8101
+
 # imageBudgetService:
 #   repository: gcr.io/buoyant-algebra-276307/budget
 #   pullPolicy: IfNotPresent
